@@ -16,7 +16,9 @@ export default {
   computed: {
     ...mapState({
       models: "models",
-    //   dataModel: state => state.models[this.widget.id]
+      dataModel(state) {
+        return state.models[this.widget.id];
+      }
       //   dataModel(state) {
       //     return {
       //       get() {
